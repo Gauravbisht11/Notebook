@@ -8,7 +8,7 @@ function Signup(props) {
   }
   const handleClick=async (e)=>{
     e.preventDefault()
-    const response=await fetch("http://notebook-mu.vercel.app/api/auth/createuser",{
+    const response=await fetch("https://notebook-mu.vercel.app/api/auth/createuser",{
          method: "POST",
          
          headers: {
