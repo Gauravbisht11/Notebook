@@ -6,7 +6,7 @@ connectToMongo()
 const app = express()
 app.use(cors(
   {
-    origin:[],
+    origin:["https://mern-notebook-brown.vercel.app"],
     methods:["POST","GET"],
     credentials:true
   }
