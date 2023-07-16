@@ -8,7 +8,7 @@ function Signup(props) {
   }
   const handleClick=async (e)=>{
     e.preventDefault()
-    const response=await fetch("https://notebook-mu.vercel.app/api/auth/createuser",{
+    const response=await fetch("https://notebook-api-sepia.vercel.app/api/auth/createuser",{
          method: "POST",
          
          headers: {
@@ -47,10 +47,7 @@ function Signup(props) {
     <label for="password" className="form-label">Password</label>
     <input type="password" className="form-control"  onChange={handleChange} minLength={5} required id="password"/>
   </div>
-  <div className="mb-3">
-    <label for="cpassword" className="form-label"> Confirm Password</label>
-    <input type="password" className="form-control" onChange={handleChange} minLength={5} required id="cpassword"/>
-  </div>
+ 
   <button type="submit" className="btn btn-primary">Submit</button>
 </form>
     </div>

@@ -5,7 +5,7 @@ function Login(props) {
     let navigate=useNavigate();
     const handleClick=async(e)=>{
         e.preventDefault()
-       const response=await fetch("https://notebook-mu.vercel.app/api/auth/login",{
+       const response=await fetch("https://notebook-api-sepia.vercel.app/api/auth/login",{
             method: "POST",
             
             headers: {
@@ -42,7 +42,7 @@ const handleChange=(e)=>{
             <input type="password" className="form-control" name="password" onChange={handleChange} value={credentials.password} id="password" />
           </div>
           
-          <button type="submit"  className="btn btn-primary " >Add Note</button>
+          <button type="submit"  className="btn btn-primary " >Login</button>
         </form>
     </div>
   )
