@@ -6,7 +6,7 @@ function Login(props) {
     const handleClick=async(e)=>{
         e.preventDefault()
        const response=await fetch("/api/auth/login",{
-            method: "POST",
+            method: "GET",
             
             headers: {
               "Content-Type": "application/json"              
