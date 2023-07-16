@@ -8,7 +8,7 @@ function Signup(props) {
   }
   const handleClick=async (e)=>{
     e.preventDefault()
-    const response=await fetch("https://notebook-api-sepia.vercel.app/api/auth/createuser",{
+    const response=await fetch("/api/auth/createuser",{
          method: "POST",
          
          headers: {
