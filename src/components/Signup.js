@@ -8,7 +8,7 @@ function Signup(props) {
   }
   const handleClick=async (e)=>{
     e.preventDefault()
-    const response=await fetch("/api/auth/createuser",{
+    const response=await fetch("http://localhost:5000/api/auth/createuser",{
          method: "POST",
          
          headers: {
@@ -35,16 +35,16 @@ function Signup(props) {
          <h2> Create a account to use Notebook</h2>
       <form onSubmit={handleClick}>
       <div className="mb-3">
-    <label for="name" className="form-label">Name</label>
+    <label htmlFor="name" className="form-label">Name</label>
     <input type="text" className="form-control"onChange={handleChange} minLength={3} required id="name"/>
   </div>
   <div className="mb-3">
-    <label for="email" className="form-label">Email address</label>
+    <label htmlFor="email" className="form-label">Email address</label>
     <input type="email" className="form-control" id="email"  onChange={handleChange} required aria-describedby="emailHelp"/>
     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
   </div>
   <div className="mb-3">
-    <label for="password" className="form-label">Password</label>
+    <label htmlFor="password" className="form-label">Password</label>
     <input type="password" className="form-control"  onChange={handleChange} minLength={5} required id="password"/>
   </div>
  

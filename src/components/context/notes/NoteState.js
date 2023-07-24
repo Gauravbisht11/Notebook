@@ -3,13 +3,14 @@ import NoteContext from "./NoteContext";
 
 const NoteState=(props)=>{
   // let host="https://notebook-api-sepia.vercel.app"
+  const host = "http://localhost:5000"
     const notesInitial=[]
     const [notes,setNotes]=useState(notesInitial)
 
 
 //fetch all notes
 const getNotes=async ()=>{
-  const response = await fetch(`/api/notes/fetchallnotes`, {
+  const response = await fetch(`${host}/api/notes/fetchallnotes`, {
     method: "GET",
     
     headers: {
@@ -29,7 +30,7 @@ const getNotes=async ()=>{
 
 //add a note
 const addNote=async (title,description,tag)=>{
-  const response = await fetch(`/api/notes/addnote`, {
+  const response = await fetch(`${host}/api/notes/addnote`, {
     method: "POST",
     
     headers: {
@@ -48,7 +49,7 @@ setNotes(notes.concat(note))
 
 
 const deleteNote=async (id)=>{
-  await fetch(`/api/notes/deletenote/${id}`, {
+  await fetch(`${host}/api/notes/deletenote/${id}`, {
     method: "DELETE",
     
     headers: {
@@ -78,7 +79,7 @@ const editNote=async (id,title,description,tag)=>{
     }
   }
   setNotes(newNotes)
-   await fetch(`/api/notes/updatenote/${id}`, {
+   await fetch(`${host}/api/notes/updatenote/${id}`, {
     method: "PUT",
     
     headers: {
