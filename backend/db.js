@@ -1,7 +1,10 @@
+const mongoose=require('mongoose')
+const mongooseURI="mongodb+srv://Gauravbisht:fnIG92q3Tzbp0IWz@cluster0.y1hmiwd.mongodb.net/?retryWrites=true&w=majority"
 
-const mongoose=require('mongoose');
-const mongoURI="mongodb://127.0.0.1:27017"  //localhost should be replace by this in new version
+// mongodb://127.0.0.1:27017
 const connectToMongo=()=>{
-    mongoose.connect(mongoURI)
-}
+    mongoose.connect(mongooseURI)
+    // console.log('hello')
+    }
+
 module.exports=connectToMongo;

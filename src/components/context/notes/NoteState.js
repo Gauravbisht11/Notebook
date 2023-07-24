@@ -3,7 +3,7 @@ import NoteContext from "./NoteContext";
 
 const NoteState=(props)=>{
   // let host="https://notebook-api-sepia.vercel.app"
-  const host = "http://localhost:5000"
+  const host = "https://mern-notebook-e8dj.onrender.com"
     const notesInitial=[]
     const [notes,setNotes]=useState(notesInitial)
 
