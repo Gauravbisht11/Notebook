@@ -1,10 +1,9 @@
 # this application is working on the local host but showing some errors while deploying on the server
-currently deploying it on the Vercel ,frontend is working fine but the response from the server is creating problem. Only the GET request is avail to fullfill
-but all other request are showing problem.
+currently deploying it on the Vercel ,frontend is working fine but the response from the server is creating problem.
 error look like  : 
-# main.ab803036.js:2     POST https://notebook-app-virid.vercel.app/api/auth/login 405
+# main.ab803036.js:2     POST https://mern-notebook-e8dj.onrender.com/api/auth/login 500
 
-# link for the notebook app  :   https://notebook-app-virid.vercel.app/
+# link for the notebook app  :   https://wondrous-gaufre-c3f830.netlify.app
 
 
 
