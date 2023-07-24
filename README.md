@@ -1,3 +1,15 @@
+# this application is working on the local host but showing some errors while deploying on the server
+currently deploying it on the Vercel ,frontend is working fine but the response from the server is creating problem. Only the GET request is avail to fullfill
+but all other request are showing problem.
+error look like  : 
+# main.ab803036.js:2     POST https://notebook-app-virid.vercel.app/api/auth/login 405
+
+# link for the notebook app  :   https://notebook-app-virid.vercel.app/
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
