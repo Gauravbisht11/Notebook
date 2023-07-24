@@ -30,8 +30,8 @@ function Signup(props) {
         props.showAlert('Invalid credentials', 'danger')
       }
     }
-    catch (err) {
-      return res.status(500).send({ ret_code: ReturnCodes.SOMETHING_WENT_WRONG });
+    catch (error) {
+      console.error(error.response.data)
     }
   }
   return (
