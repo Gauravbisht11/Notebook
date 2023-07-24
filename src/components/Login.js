@@ -4,6 +4,7 @@ function Login(props) {
     const [credentials,setCredentials]=useState({email:"",password:""})
     let navigate=useNavigate();
     const handleClick=async(e)=>{
+      try{
         e.preventDefault()
        const response=await fetch("https://mern-notebook-e8dj.onrender.com/api/auth/login",{
             method: "POST",   
@@ -25,6 +26,11 @@ function Login(props) {
           else{
             props.showAlert('Invalid credentials','danger')
           }
+        }
+        catch(err) {
+          return res.status(500).send({ret_code: ReturnCodes.SOMETHING_WENT_WRONG});
+        } 
+
     }
 const handleChange=(e)=>{
     setCredentials({...credentials,[e.target.name]:e.target.value})
