@@ -1,10 +1,11 @@
-const mongoose=require('mongoose')
-const mongooseURI="mongodb+srv://Gauravbisht:fnIG92q3Tzbp0IWz@cluster0.y1hmiwd.mongodb.net/?retryWrites=true&w=majority"
+const mongoose = require('mongoose');
+const connectToMongo = () => {
+  mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.error("MongoDB connection error:", err));
+};
 
-// mongodb://127.0.0.1:27017
-const connectToMongo=()=>{
-    mongoose.connect(mongooseURI)
-    // console.log('hello')
-    }
-
-module.exports=connectToMongo;
+module.exports = connectToMongo;
